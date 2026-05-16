@@ -1,0 +1,65 @@
+{
+  "slug": "quantum-kernel-classifier",
+  "name": "Quantum Kernel Classifier",
+  "version": "1.0.0",
+  "author": "openqc-team",
+  "license": "Apache-2.0",
+  "description": "Classify data using quantum kernel estimation. Encodes data into quantum states and computes kernel matrix entries via fidelity tests.",
+  "owner": "openqc",
+  "scope": "catalog",
+  "access": "open",
+  "implementation_mode": "catalog_synced",
+  "industries": [
+    "ml"
+  ],
+  "techniques": [
+    "gate"
+  ],
+  "difficulty": "advanced",
+  "computation_model": "gate",
+  "algorithm_type": "circuit",
+  "qubit_count": 4,
+  "min_qubits": 4,
+  "recommended_backends": [
+    "vortex-noiseless"
+  ],
+  "tags": [
+    "ml",
+    "classification",
+    "kernel",
+    "machine-learning"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "num_qubits": {
+        "type": "integer",
+        "description": "Feature map qubits (default 4)"
+      },
+      "reps": {
+        "type": "integer",
+        "description": "Feature map repetitions (default 2)"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "kernel_alignment": {
+        "type": "number"
+      },
+      "fidelity_samples": {
+        "type": "number"
+      }
+    }
+  },
+  "template_path": "template.py",
+  "status": "available",
+  "metadata": {
+    "year_introduced": null,
+    "source": "ported from in-image builtin",
+    "academic_intro": "Can quantum computers enhance machine learning? Quantum kernel methods map data into a high-dimensional Hilbert space where classical separability emerges \u2014 a quantum advantage for pattern recognition.",
+    "expected_takeaway": "You will see how quantum feature maps create kernels that capture patterns classical kernels might miss, demonstrated on a simple classification task."
+  }
+}
