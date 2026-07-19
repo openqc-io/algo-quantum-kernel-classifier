@@ -17,7 +17,7 @@ class AlgorithmTemplate:
             "type": "circuit",
             "backend_id": backend,
             "provider": "vortex",
-            "qasm": _build_kernel_circuit(
+            "qasm_code": _build_kernel_circuit(
                 input_data.get("num_qubits", 4),
                 input_data.get("reps", 2),
             ),
